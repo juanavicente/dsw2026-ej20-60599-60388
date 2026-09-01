@@ -4,26 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 
-<body class="dashboard-page">
-
-    <input type="checkbox" id="nav-toggle">
+<body>
 
     <header>
         <h1>Dashboard</h1>
-
-        <label for="nav-toggle" class="menu-button">
-            ☰
-        </label>
+        <button id="menu">☰</button>
     </header>
 
     <nav>
-        <a href="dashboard.html">Inicio</a>
+        <a href="#">Inicio</a>
         <a href="#">Perfil</a>
         <a href="#">Configuración</a>
-        <a href="login.html">Cerrar sesión</a>
+        <a href="#">Cerrar sesión</a>
     </nav>
 
     <main>
@@ -34,6 +29,13 @@
     <footer>
         Información de mi empresa
     </footer>
+<script>
+    const menu = document.getElementById("menu");
+    const nav = document.querySelector("nav");
 
+    menu.addEventListener("click", () => {
+        nav.style.display = nav.style.display === "block" ? "none" : "block";
+    });
+</script>
 </body>
 </html>
